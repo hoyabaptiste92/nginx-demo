@@ -16,7 +16,7 @@
 
 At the root folder of your project, add a `docker-compose.yml` file.  Add the following:
 
-```YAML
+```yaml
 version: '3.5'
 
 services:
@@ -55,7 +55,7 @@ To run your nginx website, open your browser to <http://localhost>
 
 Let's change the host port to 8080:
 
-```YAML
+```yaml
 version: '3.5'
 
 services:
@@ -110,7 +110,7 @@ Let's add a place for the configuration for our containers. In the root director
 
 Now add a sub-directory called `nginx`. In this folder add a file (no extension) called `vhost`
 
-```json
+```nginx
 server {
     index index.php index.html;
     error_log /var/log/nginx/error.log;
@@ -148,7 +148,7 @@ To run your nginx website, open your browser to <http://localhost>. **Note:** No
 
 Now we add a custom server name `docker.local` to `vhost`
 
-```json
+```nginx
 server {
     index index.php index.html;
     server_name docker.local;               // custom "domain" name - http://docker.local
